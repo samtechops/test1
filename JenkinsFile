@@ -4,10 +4,8 @@ node('jenkins-slave') {
         sh(script: """
             echo "hello"
             terraform --version
-           git clone https://github.com/marcel-dempers/docker-development-youtube-series.git
-           cd ./docker-development-youtube-series/golang
-           
-           docker build . -t test
+            aws --version
+
         """)
     }
 }
