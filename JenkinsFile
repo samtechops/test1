@@ -1,13 +1,11 @@
 node('jenkins-slave') {
     
      stage('test pipeline') {
-        container("aws"){
-            sh(script: """
-                echo "hello"
-                terraform --version
-                aws --version
-
-            """)
-        }
+        sh(script: """
+            echo "hello"
+            terraform --version
+            aws --version
+           
+        """)
     }
 }
