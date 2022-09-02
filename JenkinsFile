@@ -3,7 +3,8 @@ node('jenkins-slave') {
      stage('test pipeline') {
         sh(script: """
             echo "hello"
-            terraform --version
+            tfenv install 1.1.7
+            tfenv use 1.1.7
             aws --version
            
         """)
